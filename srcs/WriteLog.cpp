@@ -9,11 +9,12 @@ void writeLog(std::map<int, int> &myMap, std::vector<int> &myVector, int8_t head
 		exit(1);
 	}
 	if (header == _INIT_CONTAINERS_)
-		log << "=====Containers values after initializating by random elements=====" << std::endl;
+		log << "=====Containers values after initializing by random elements=====" << std::endl;
 	if (header == _INIT_DEL_RAND_CONTAINERS_)
 		log << "=====Containers values after deleting random amount of values=====" << std::endl;
 	if (header == _DELETE_ALONE_ELEMS_)
-		log << "=====Containers values after deleting elements that apper in only one of them======" << std::endl;
+		log << "=====Containers values after deleting elements that appear in"
+		 " only one of them======" << std::endl;
 	log << "Here's vector goes:" << std::endl;
 	for (const auto &i : myVector) {
 		log << i << " ";
