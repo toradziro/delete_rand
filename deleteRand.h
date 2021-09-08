@@ -5,6 +5,7 @@
 #define _INIT_CONTAINERS_           0
 #define _INIT_DEL_RAND_CONTAINERS_  1
 #define _DELETE_ALONE_ELEMS_        2
+#define _MAX_TO_DEL_				15
 
 
 #include <iostream>

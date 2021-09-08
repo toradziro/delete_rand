@@ -36,7 +36,12 @@ void deleteFromMap(std::map<int, int> &myMap, std::vector<int> &myVector) {
 }
 
 void deleteRandFromVec(std::vector<int> &myVec, int amount) {
-	int toDelete = generateRand(0, amount);
+	int toDelete;
+	if (amount <= _MAX_TO_DEL_) {
+		toDelete = generateRand(0, amount);
+	} else {
+		toDelete = generateRand(0, _MAX_TO_DEL_);
+	}
 	for (int i = 0; i < toDelete; ++i) {
 		int currDel = generateRand(0, myVec.size());
 		myVec.erase(myVec.begin() + currDel);
@@ -44,7 +49,12 @@ void deleteRandFromVec(std::vector<int> &myVec, int amount) {
 }
 
 void deleteRandFromMap(std::map<int, int> &myMap) {
-	int toDelete = generateRand(0, myMap.size());
+	int toDelete = 0;
+	if (myMap.size() <= _MAX_TO_DEL_) {
+		toDelete = generateRand(0, myMap.size());
+	} else {
+		toDelete = generateRand(0, _MAX_TO_DEL_);
+	}
 	for (int i = 0; i < toDelete; ++i) {
 		int currDel = generateRand(0, myMap.size());
 		if (myMap.count(currDel) != 0) {

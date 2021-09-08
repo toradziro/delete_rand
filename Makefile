@@ -37,6 +37,9 @@ fclean: clean
 		rm -f tester
 		@echo "Objs and executable files deleted"
 
+free_logs:
+		./result/freeLogs.sh
+
 re:		fclean all
 
 .SILENT:
